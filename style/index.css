@@ -47,6 +47,7 @@ table {
 	border-spacing: 0;
 }
 
+/* -----------------------------------general---------------------------------*/
 * {
     box-sizing: border-box;
 }
@@ -70,7 +71,12 @@ p {
     width: 800px;
     margin: 0 auto;
 }
+/* -----------------------------------header---------------------------------*/
+header{
+    display: flex;
+}
 
+/* -----------------------------------top-content---------------------------------*/
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +91,7 @@ p {
     padding-bottom: 20px;  
 }
 
+/* -----------------------------------middle-content---------------------------------*/
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -112,6 +119,7 @@ p {
     justify-content: center;
 }
 
+/* -----------------------------------bottom-content---------------------------------*/
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -126,6 +134,7 @@ p {
     padding-right: 0;
 }
 
+/* -----------------------------------footer---------------------------------*/
 footer {
     width: 100%;
     background: black;
@@ -144,3 +153,5 @@ footer nav a {
     color: white;
     text-decoration: none;
 }
+
+/* -----------------------------------@media---------------------------------*/
