@@ -232,18 +232,17 @@ footer nav a:visited{
         }
 
 
-        
-        .middle-content{
-            
-            border: 2px solid green;
-        }
+    
         .boxes{
             flex-direction: column;
-            border: 2px solid black;
+            
         }
         .middle-content .boxes .box{
-            border: 2px solid red;
-            margin: 0px;
+
             
+        }
+        
+        .bottom-content, footer{
+            display: none;
         }
     }
