@@ -67,25 +67,26 @@ p {
     line-height: 1.4;
 }
 
-/* link settings*/
 a{
     text-decoration: none;
 }
-a:visited{
-    color: black;
-}
-/* end link settings*/
+
 
 .container {
-    width: 800px;
+    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
 }
 /* -----------------------------------header---------------------------------*/
 .nav-bar{
     display: flex;  
     align-items: flex-end;
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
     margin-top: 2.5%;
+}
+.nav-bar img{
+    width: 23%;
+    
 }
 .nav-bar nav{
     display: flex;
@@ -94,7 +95,16 @@ a:visited{
     color: black;
     text-decoration: none;
 }
-
+.nav-bar a:visited{
+    color: black;
+}
+header{
+    margin-bottom: 2.5%;
+}
+.hero-img {
+    width: 100%;
+    
+}
 
 /* -----------------------------------top-content---------------------------------*/
 .top-content {
@@ -131,7 +141,7 @@ a:visited{
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
+    background:black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
@@ -173,5 +183,67 @@ footer nav a {
     color: white;
     text-decoration: none;
 }
+footer nav a:visited{
+    color: white;
+}
+
 
 /* -----------------------------------@media---------------------------------*/
+@media(min-width: 500px){
+    .container{
+        width: 100%
+    }
+}
+@media(max-width: 500px){
+        .nav-bar img{
+            width: 40%;
+            margin-bottom: 10%;
+        }
+        .nav-bar{
+            margin-bottom: 5%;
+        }
+        .nav-bar, .nav-bar nav{
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .nav-bar nav a{
+            padding: 5px;
+            background-color: lightgrey;
+            border: 2px solid lightgrey;
+            border-style: outset;
+            border-radius: 5px;
+            width: 60%;
+            text-align: center;
+
+        }
+        .hero-img{
+            width: 200%;
+            margin-bottom: 5%;
+        }
+
+
+        .top-content{
+            flex-direction: column;
+            
+        }
+        .top-content .text-container{
+            width: 100%;
+        }
+
+
+        
+        .middle-content{
+            
+            border: 2px solid green;
+        }
+        .boxes{
+            flex-direction: column;
+            border: 2px solid black;
+        }
+        .middle-content .boxes .box{
+            border: 2px solid red;
+            margin: 0px;
+            
+        }
+    }
