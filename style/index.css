@@ -47,6 +47,7 @@ table {
 	border-spacing: 0;
 }
 
+/* -----------------------------------general---------------------------------*/
 * {
     box-sizing: border-box;
 }
@@ -66,11 +67,49 @@ p {
     line-height: 1.4;
 }
 
-.container {
-    width: 800px;
-    margin: 0 auto;
+a{
+    text-decoration: none;
 }
 
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* -----------------------------------header---------------------------------*/
+.nav-bar{
+    display: flex;  
+    align-items: flex-end;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+}
+.nav-bar img{
+    width: 23%;
+    
+}
+.nav-bar nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+.nav-bar a:visited{
+    color: black;
+}
+header{
+    margin-bottom: 2.5%;
+}
+.hero-img {
+    width: 100%;
+    min-width: 800px;
+    display: flex;
+    
+    
+}
+
+/* -----------------------------------top-content---------------------------------*/
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +124,7 @@ p {
     padding-bottom: 20px;  
 }
 
+/* -----------------------------------middle-content---------------------------------*/
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -102,16 +142,28 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
-    background: black;
+    background:black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+/*box colors*/
+.middle-content .boxes :nth-child(1){background-color: teal;}
+.middle-content .boxes :nth-child(2){background-color: gold;}
+.middle-content .boxes :nth-child(3){background-color: cadetblue;}
+.middle-content .boxes :nth-child(4){background-color: coral;}
+.middle-content .boxes :nth-child(5){background-color: crimson;}
+.middle-content .boxes :nth-child(6){background-color: forestgreen;}
+.middle-content .boxes :nth-child(7){background-color: darkorchid;}
+.middle-content .boxes :nth-child(8){background-color: hotpink;}
+.middle-content .boxes :nth-child(9){background-color: indigo;}
+.middle-content .boxes :nth-child(10){background-color: dodgerblue;}
 
+/* -----------------------------------bottom-content---------------------------------*/
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -126,6 +178,7 @@ p {
     padding-right: 0;
 }
 
+/* -----------------------------------footer---------------------------------*/
 footer {
     width: 100%;
     background: black;
@@ -144,3 +197,89 @@ footer nav a {
     color: white;
     text-decoration: none;
 }
+footer nav a:visited{
+    color: white;
+}
+
+
+/* -----------------------------------@media---------------------------------*/
+@media(min-width: 500px){
+    .container{
+        width: 100%
+    }
+}
+
+
+@media(max-width: 800px){
+
+    .middle-content .boxes {
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width: 500px){
+    /*header*/
+        .nav-bar img{
+            width: 40%;
+            margin-bottom: 10%;
+        }
+        .nav-bar{
+            margin-bottom: 5%;
+        }
+        .nav-bar, .nav-bar nav{
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .nav-bar nav a{
+            padding: 5px;
+            background-color: lightgrey;
+            border: 2px outset lightgrey;
+            border-radius: 5px;
+            width: 60%;
+            text-align: center;
+
+        }
+        .hero-img{
+            margin-bottom: 5%;
+            
+        }
+        .nav-bar nav :nth-child(n+2){
+            background-color: transparent;
+            border-style: solid;
+            color: lightgray;
+        }
+
+    /*top-content*/
+        .top-content{
+            flex-direction: column;
+            
+        }
+        .top-content .text-container{
+            width: 100%;
+        }
+
+    /*middle-content*/
+    
+        .boxes{
+            flex-direction: column;
+            
+        }
+        .middle-content .boxes .box{
+            justify-content: center;
+            
+        }
+        .middle-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        
+
+    /*display none*/
+        .bottom-content, footer, .middle-content .boxes :nth-child(n+5), header .nav-bar nav :nth-child(3){
+            display: none;
+        }
+    }
